@@ -1,5 +1,45 @@
-/Estilo menu/
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+/*Inicio do estilo icone*/
+.icons-redesociais { /*classe*/
+  position: fixed; /*os ícones ficaram fixo, mesmo se mudar de página */
+  bottom: 10px; /*distância de 10 pixels entre os ícones e a parte inferior da janela do navegador.*/
+  left: 10px; /* Move os ícones para a margem esquerda */
+  display: flex; /*permite que os ícones fiquem flexíveis*/
+  flex-direction: row; /*ícones em forma de linnha (horizontal)*/
+  font-size: 25px; /* Tamanho dos ícones */
+}
+
+.fa {
+  color: #a0a0a7; /* cor dos ícones */
+  /*text-shadow: 0 0 10px #0072ff, 0 0 20px #0072ff, 0 0 30px #0072ff, 
+    0 0 40px #0072ff; sombra dos ícones com  diferentes profundidades e azul */
+  margin-left: 20px; /*espaçamento entre os ícones */
+  /*animation: animate 3s linear infinite; /*duração de 3s, porem é linear (Constante) e infinite (repetir sem parar)*/
+}
+
+#instagram {
+  animation-delay: 0s; /*Animação começa automáticamente*/
+}
+
+#whatsapp {
+  animation-delay: 0.3s; /*animação em 0,3s */
+}
+
+#github {
+  animation-delay: 0.6s; /*animação e 0,6s*/
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg); /* No início da animação, a cor permanece inalterada (0 graus de rotação de matiz). */
+  }
+  to {
+    filter: hue-rotate(360deg); /* No final da animação, a cor é alterada para uma rotação completa de 360 graus no espectro de cores. */
+  }
+}
+/*Fim estilo icones */
+
+/*Inicio Estilo menu*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"); /*Importando uma fonte e &display=swap, garante que tudo ocorra bem*/
 
 * {
   margin: 0;
@@ -9,8 +49,8 @@
 }
 
 body {
-  background-image: url('preto1.jpeg');
-  background-size: cover;
+  background-image: url('preto1.jpg');
+  background-size: cover;  /*imagem de fundo cubra toda a área do elemento*/
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -18,30 +58,26 @@ body {
   min-height: 100vh;
 }
 
+
 .container {
   position: fixed;
   top: 50%;
-  right: 50;
-  transform: translateY(-50%);
+  right: 50%;
+  transform: translateY(-50%); /* ajusta o elemento para que seu centro coincida com o centro da janela, tanto verticalmente quanto horizontalmente.*/
 }
 
 .navigation {
-    position: fixed;
-    top: 20;
-    right: 5px; /* Ajuste a margem direita conforme necessário */
-    width: 25px; /* Altere para 'auto' para ajustar automaticamente a largura com base no conteúdo */
-    height: 80%; /* Use 100% para que o menu cubra toda a altura vertical */
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: inset 5px 5px 5px rgba(36, 58, 247, 0.5),
-    inset -5px -5px 10px rgba(27, 55, 212, 0.2),
-    inset -5px -5px 10px rgba(64, 61, 243, 0.75);
-    border-radius: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centralize verticalmente */
-    align-items: flex-end; /* Alinhe à direita */
+  position: fixed;
+  top: 0; /* Alinhe o contêiner no topo da página */
+  left: 87%; /* Centralize horizontalmente */
+  transform: translateX(-50%); /* Centralize horizontalmente */
+  width: 30%; /* Largura do contêiner */
+  height: auto; /* Ajuste a altura com base no conteúdo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /*para ficar a frente, como se fosse uma camada a frente */
 }
-    
     
 .navigation li {
     position: relative;
@@ -60,13 +96,13 @@ body {
   height: 8px;
   background: #222;
   border-radius: 50%;
-  transition: 0.5s;
+  transition: 0.5s; 
 }
 
 .navigation li.active::before {
-  background: #0f0;
-  box-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0,
-    0 0 40px #0f0, 0 0 50px #0f0;
+  background: rgb(31, 101, 231);
+  box-shadow: 0 0 5px #a0a0a7, 0 0 10px #a0a0a7, 0 0 20px #a0a0a7, 0 0 30px #a0a0a7,
+    0 0 40px #a0a0a7, 0 0 50px #a0a0a7;
 }
 
 .navigation li a .icon {
@@ -148,4 +184,49 @@ body {
     transform: translateY(0); /* Redefina a transformação vertical */
     transition-delay: 0.2s;
 }
-/fim do estilo menu8/
+/*fim do estilo menu*/
+/*estilo logo*/
+.header {
+  display: flex;
+  justify-content: space-between; /* Alinha o conteúdo do header nas extremidades */
+  align-items: center; /* Alinha verticalmente no centro */
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura da página */
+  
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente no centro */
+  margin-left: 20px;
+  margin-top: -20px;
+}
+
+.logo-container img {
+  width: 100px; /* Ajuste o tamanho do logotipo conforme necessário */
+  height: 100px;
+}
+
+/*Parte quem somos */
+.neon-container {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Para ocupar a largura total da página */
+}
+
+.neon-container img {
+  width: 900px; /* Defina a largura desejada para a imagem */
+  height: auto; /* Isso manterá a proporção original da imagem */
+  position: absolute; /* Torna a posição da imagem absoluta */
+  top: -170px; /* Posiciona a partir do topo */
+  left: 700px; /* Centraliza horizontalmente */
+  transform: translateX(-50%) rotate(-5deg) ; /* Centraliza horizontalmente */
+}
+
