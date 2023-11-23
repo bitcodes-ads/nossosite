@@ -11383,7 +11383,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 .hidden2 {
   opacity: 0;
   filter: blur(15px);
-  transform: translateX(100%);
+  transform: translateX(15%);
   transition: all 1.5s;
 }
 
@@ -11394,3 +11394,134 @@ section#contact form#contactForm :-ms-input-placeholder {
   transition: all 0.5s;
 }
 
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .posicionamentoTextoGrapy {
+    position: relative;
+    top: 30px;
+  }
+  
+  .grapy {
+    width: 430px;
+    left: 1px;
+  }
+
+  .posicinamento-icones {
+    position: relative;
+    top: 40px;
+  }
+  
+  .logos {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .avatar {
+    height: 70px;
+    border-radius: 10px;
+    margin: 5px;
+  }
+
+  .hidden2 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(5%);
+    transition: all 1.5s;
+  }
+
+  .show2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+  .posicionamentoTextoGrapy {
+    position: relative;
+    top: 30px;
+  }
+  
+  .grapy {
+    width: 350px;
+    left: 1px;
+  }
+
+  .posicinamento-icones {
+    position: relative;
+    top: 40px;
+  }
+  
+  .logos {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .avatar {
+    height: 50px;
+    border-radius: 10px;
+    margin: 4px;
+  }
+
+  .hidden2 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(10%);
+    transition: all 1.5s;
+  }
+
+  .show2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+  
+  .posicionamentoTextoGrapy {
+    position: relative;
+    top: 10px;
+  }
+  
+  .grapy {
+    width: 450px;
+    top: 20px;
+    left: 40px;
+  }
+
+  .posicinamento-icones {
+    position: relative;
+    top: 50px;
+    left: 1rem;
+  }
+  
+  .logos {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .avatar {
+    height: 80px;
+    border-radius: 10px;
+    margin: 4px;
+  }
+
+  .hidden2 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(3%);
+    transition: all 1.5s;
+  }
+
+  .show2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+}
